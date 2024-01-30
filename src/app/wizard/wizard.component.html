@@ -1,0 +1,63 @@
+<!-- <div class="container-line"></div>
+<div class="wizard-inner">
+
+    <div [ngClass]="{'active':count === 1}" (click)="setStep(1)">1</div>
+    <div [ngClass]="{'active':count === 2}" (click)="setStep(2)">2</div>
+    <div [ngClass]="{'active':count === 3}" (click)="setStep(3)">3</div>
+    <div [ngClass]="{'active':count === 4}" (click)="setStep(4)">4</div>
+</div>
+<button (click)="previousStep()">prev</button>
+<button (click)="nextStep()">next</button> -->
+<div class="container">
+    <div class="wizard-container">
+        <div class="container-line"></div>
+        <ul class="wizard-inner">
+            <li class="items"><a  [ngClass]="{'active':count === 1}" (click)="setStep(1)"><i
+                        class="fa-solid fa-folder-open"></i></a></li>
+            <li class="items"><a  [ngClass]="{'active':count === 2}" (click)="setStep(2)"><i
+                        class="fa-solid fa-pen"></i></a></li>
+            <li class="items"><a  [ngClass]="{'active':count === 3}" (click)="setStep(3)"><i
+                        class="fa-solid fa-image"></i></a></li>
+            <li class="items"><a  [ngClass]="{'active':count === 4}" (click)="setStep(4)"><i
+                        class="fa-solid fa-check"></i></a></li>
+        </ul>
+    </div>
+    
+    <div class="form-container">
+        <div [ngClass]="{'form-content-show':count === 1 , 'form-content-hide':count !== 1}">
+            <div class="step-text">
+                <h1>Step 1</h1>
+                <p>Step 1</p>
+            </div>
+            <div class="step-btn"><button (click)="nextStep()">save and continue</button></div>
+        </div>
+        <div [ngClass]="{'form-content-show':count === 2 , 'form-content-hide':count !== 2}">
+            <div class="step-text">
+                <h1>Step 2</h1>
+                <p>Step 2</p>
+            </div>
+            <div class="step-btn">
+                <button (click)="previousStep()">Previous</button>
+                <button (click)="nextStep()">save and continue</button>
+            </div>
+        </div>
+        <div [ngClass]="{'form-content-show':count === 3 , 'form-content-hide':count !== 3}">
+            <div class="step-text">
+                <h1>Step 3</h1>
+                <p>Step 3</p>
+            </div>
+            <div class="step-btn">
+                <button (click)="previousStep()">Previous</button>
+                <button (click)="nextStep()">Skip</button>
+                <button (click)="nextStep()">save and continue</button>
+            </div>
+        </div>
+        <div [ngClass]="{'form-content-show':count === 4 , 'form-content-hide':count !== 4}">
+            <div class="step-text">
+                <h1>Completed !.</h1>
+                <p>You have successfully completed all steps.</p>
+            </div>
+            <div class="step-btn"></div>
+        </div>
+    </div>
+</div>

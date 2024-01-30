@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { StepFormComponent } from './step-form/step-form.component';
+import { WizardComponent } from './wizard/wizard.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,StepFormComponent],
+  imports: [RouterOutlet,WizardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
